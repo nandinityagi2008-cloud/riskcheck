@@ -1,0 +1,16 @@
+[project]
+name = "riskcheck"
+version = "0.1.0"
+description = "Verify LLM-written volatility commentary against the data it describes"
+requires-python = ">=3.10"
+dependencies = ["numpy"]
+
+[project.optional-dependencies]
+llm = ["anthropic"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
